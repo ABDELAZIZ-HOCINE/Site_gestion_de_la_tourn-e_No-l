@@ -1,0 +1,438 @@
+/* Réinitialisation des styles par défaut des éléments HTML ------------------------------------------------------------ */
+html, header, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, button, input {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* Navigation --------------------------------------------------------------------------------------------- */
+nav.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 0;
+    z-index: 1000; /* Assure que la barre de navigation reste au-dessus des autres éléments */
+    box-shadow: 0 4px 10px rgb(53, 53, 53); /* Ombre portée */
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.container-logo img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease; /* Transition au survol */
+}
+
+.container-logo img:hover {
+    transform: scale(1.1); /* Effet zoom au survol */
+}
+
+.container-title h1 {
+    color: rgb(177, 0, 0);
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px; /* Espacement des lettres */
+}
+
+.elms_nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: rgb(177, 0, 0);
+}
+
+.elms_nav li {
+    display: inline-block;
+}
+
+.elms_nav li a {
+    text-decoration: none;
+    color: rgb(177, 0, 0);
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.elms_nav li a:hover {
+    color: rgb(177, 0, 0);
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Ombre au survol */
+    transform: scale(1.1); /* Zoom au survol */
+    text-decoration: none; /* Soulignement au survol */
+    font-size: 15px;
+}
+
+/* Barre de recherche --------------------------------------------------------------------------------------- */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 15px;
+    width: 220px;
+}
+
+.search-bar input {
+    border: none;
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.342);
+    color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.486);
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar img {
+    width: 20px;
+    height: 18px;
+}
+
+.search-bar img:active {
+    width: 19px;
+}
+
+/* Séparateur de navigation -------------------------------------------------------------------------------- */
+.sep1 {
+    height: 4px;
+    background-color: rgb(177, 0, 0);
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Transition pour la couleur et le poids des liens au survol ------------------------------------------------ */
+.elms_nav li a span {
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Effet de changement de couleur et de gras au survol ---------------------------------------------------- */
+.elms_nav li a:hover span {
+    color: darkred;
+    font-weight: bold;
+}
+
+/* Animation douce pour les éléments de menu ------------------------------------------------------------ */
+.elms_nav .menu-item {
+    transition: all 0.3s ease;
+}
+
+/* Effet de sélection avec un soulignement et mise en gras ------------------------------------------------ */
+.elms_nav .menu-item.selected {
+    text-decoration: underline solid 2px; /* Soulignement épais */
+    /* Styles pour l'élément de menu actif */
+    font-weight: bolder;
+    color: rgb(177, 0, 0);
+    text-shadow: 0 4px 4px rgb(131, 124, 124);
+    font-size: large;  
+}
+.navigation-button-open {
+    display: none;
+}
+.navigation-button-close {
+    display: none;
+}
+.sep {
+    display: none;
+}
+
+/* Design réactif pour les appareils mobiles --------------------------------------------------------------- */
+@media screen and (max-width: 1300px) {
+    body {
+        position: relative;
+        margin: 0px;
+        padding-top: 0px;
+    }
+    .slash {
+        display: none;
+    }
+    nav.navigation {
+        position: relative;
+        top: 0;
+        width: 100vw;
+        padding: 12px 0;
+    }
+
+    .navigation-list {
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .elms_nav li a{
+        color: #ffffff;
+    }
+
+    .navigation-button-open {
+        position: relative;
+        display: flex;
+        border-style: none;
+        background: none;
+    }
+    
+    .navigation-button-open img {
+        margin-top: 10px;
+        padding-right: 20px;
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    .navigation-button-open img:hover {
+        width: 39px;
+        height: 19px;
+    }
+    
+    .navigation-button-open img:active {
+        width: 40px;
+        height: 20px;
+    }
+
+    .navigation-button-close {
+        position: relative;
+        margin-top: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        border-style: none;
+        background: none;
+    }
+    
+    .navigation-button-close img {
+        margin-top: 10px;
+        width: 50px;
+        height: 10px;
+        cursor: pointer;
+    }
+    
+    .navigation-button-close img:hover {
+        width: 40px;
+        height: 10px;
+    }
+    
+    .navigation-button-close img:active {
+        width: 52px;
+        height: 12px;
+    }
+    
+    .sep {
+        position: relative;
+        display: flex;
+        height: 1px;
+        width: 50vw; 
+        margin-top: 40px;
+        background-color: #ffffff;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .nav2{
+        display: block;
+        position: fixed;
+        background-color: rgb(177, 0, 0);;
+        width: 100vw;
+        height:auto;
+        left: 0;
+        right: 0;
+        top: -200%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.664);
+        transition: top 0.5s ease;
+        max-height: 90vh;
+        overflow-y: auto;        
+        z-index: 900;
+    }
+    
+    .nav2.open {
+        top:0%;
+    }
+    
+    .elms_nav li a:hover{
+        color: rgb(255, 255, 255);
+        text-shadow: 5px 5px 10px rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: larger;
+        text-decoration: none;
+    }
+
+    .container-title h1 {
+        font-size: 28px;
+    }
+
+    .elms_nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+
+    .elms_nav .menu-item.selected {
+        text-decoration: underline solid 3px;
+        font-weight: bolder;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 4px 4px rgb(255, 255, 255);
+        font-size: large;  
+    }
+}
+
+
+@media screen and (max-width: 1300px) and (min-width: 700px) {
+    .search-bar {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .navigation-list {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        padding:0px;
+        width: 80vw;
+    }
+    .navigation-button-open {
+        position: absolute;
+        bottom: 5px;
+        right: 40vw;
+        left: 45vw;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-style: none;
+        background: none;
+    }
+    
+    .navigation-button-open img {
+        margin-top: 10px;
+        width: 40px;
+        height: 8px;
+        cursor: pointer;
+    }
+    
+    .navigation-button-open img:hover {
+        width: 40px;
+        height: 10px;
+    }
+    
+    .navigation-button-open img:active {
+        width: 52px;
+        height: 12px;
+    }
+
+    .container-logo-title {
+        position: relative;
+        flex-direction: column;
+        gap:0px;
+        top: 0%;
+    }
+
+    .container-title h1 {
+        font-size: 24px;
+        padding-top: 0px;
+        
+    }
+
+    .container-logo img {
+        width: 70px;
+        padding-bottom: 0px;
+    }
+    
+    .elms_nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .sep1 {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container-title h1 {
+        font-size: 20px;
+    }
+
+    .inner1-home-container h2 {
+        font-size: 10px;
+    }
+
+    /* Texte dans le container d'accueil ---------------------------------------------------------------------- */
+    .inner1-home-container p {
+        font-size: 8px;
+    }
+    
+}
+
+@media screen and (max-width: 200px) {
+    .container-title h1 {
+        font-size: 10px;
+    }
+
+    .inner1-home-container h2 {
+        font-size: 5px;
+    }
+
+    /* Texte dans le container d'accueil ---------------------------------------------------------------------- */
+    .inner1-home-container p {
+        font-size: 4px;
+    }
+}
+
+.success{
+    margin-top: 20px;
+    text-align: center;
+    color: #00c20a; /* Vert */
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.error{
+    margin-top: 20px;
+    text-align: center;
+    color: #ff0000; /* Vert */
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}

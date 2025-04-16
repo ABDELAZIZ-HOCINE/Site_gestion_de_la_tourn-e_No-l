@@ -1,0 +1,150 @@
+/* Styles spécifiques pour la page de compte - Version centrée */
+#compte {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 40px 0;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#compte .inner1-home-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Centrage du séparateur */
+.sep2 {
+    margin: 0 auto 30px;
+}
+
+/* Styles pour le formulaire de connexion */
+#connexion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Centrage des messages */
+#compte .success, 
+#compte .error {
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Centrage des boutons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 30px auto 0;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Styles pour les informations du compte */
+.account-info {
+    margin: 30px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+/* Centrage du texte d'inscription */
+#compte p {
+    text-align: center;
+    margin: 15px auto;
+    max-width: 80%;
+}
+
+/* Centrage du lien d'inscription */
+#compte a {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+/* Styles pour la confirmation de suppression */
+.confirm-suppression {
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff8f8;
+    border: 1px solid #ffdddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.confirm-suppression input[type="text"] {
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+}
+
+.confirm-suppression .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #compte .inner1-home-container {
+        padding: 30px 20px;
+        width: 95%;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .confirm-suppression input[type="text"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #compte {
+        padding: 20px 0;
+    }
+    
+    #compte .inner1-home-container {
+        padding: 25px 15px;
+    }
+    
+    #connexion {
+        padding: 20px 15px;
+    }
+    
+    .account-info, .confirm-suppression {
+        width: 100%;
+        padding: 15px;
+    }
+}

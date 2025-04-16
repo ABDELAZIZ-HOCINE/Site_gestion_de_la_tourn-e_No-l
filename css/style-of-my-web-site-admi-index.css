@@ -1,0 +1,210 @@
+@media screen and (min-width: 1301px) {
+    /* Styles généraux du corps de la page */
+    body {
+        position: fixed;
+        background-color: #f4f4f9; /* Couleur de fond plus douce */
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+        padding-top: 150px; /* Réduction du décalage pour un look plus compact */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
+    }
+}
+
+/* Animation des étoiles : Positionnement absolu et style circulaire */
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.home-container {
+    padding: 30px;
+}
+
+/* Titre */
+#accueil h1 {
+    color: #c41e3a;
+    text-align: center;
+    margin-bottom: 20px; /* Espacement accru */
+    font-size: 2.5rem; /* Taille de police plus grande */
+    font-weight: 600; /* Poids de police plus fort */
+}
+
+/* Liste des éléments */
+#accueil .win_list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Meilleure répartition des éléments */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+/* Conteneur interne */
+#accueil .inner-home-container {
+    width: calc(25% - 20px); /* Largeur ajustée pour 4 éléments par ligne */
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0; /* Bordure plus subtile */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff; /* Fond blanc pour un look plus propre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+    /*border: solid 1px red;*/
+}
+
+#accueil .inner-home-container:hover {
+    transform: translateY(-5px); /* Effet de levée au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+}
+
+/* Image */
+#accueil .win-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Lien du menu */
+#accueil .menu-item {
+    display: block;
+    padding: 15px;
+    color: #333; /* Couleur de texte plus sobre */
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500; /* Poids de police moyen */
+    font-size: 1.1rem; /* Taille de police légèrement augmentée */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+#accueil .menu-item i {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    font-size: 1.5rem; /* Taille des icônes augmentée */
+    color: #c41e3a; /* Couleur des icônes */
+}
+
+#accueil .menu-item:hover {
+    background-color: #c41e3a; /* Couleur de fond au survol */
+    color: #ffffff; /* Texte blanc au survol */
+}
+
+#accueil .menu-item:hover i {
+    color: #ffffff; /* Icônes blanches au survol */
+}
+
+.separateur {
+    background-color: #c41e3a; /* Couleur de la ligne */
+    width: 100%; /* Largeur de la ligne */
+    height: 2px; /* Épaisseur de la ligne */
+    margin: 20px auto; /* Centrage et espacement */
+    position: relative; /* Pour ajouter des éléments supplémentaires si besoin */
+    border-radius: 2px; /* Bords légèrement arrondis */
+    opacity: 0.8; /* Légère transparence pour un look plus doux */
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Transition fluide */
+}
+
+@media screen and (max-width: 1300px) {
+    /* Styles généraux du corps de la page */
+    body {
+        position: relative;
+        padding-top: 0px; /* Réduction du décalage pour un look plus compact */
+    }
+    /* Conteneur principal */
+    #accueil .home-container {
+        max-width: 90%; /* Largeur maximale réduite pour s'adapter à l'écran */
+        padding: 20px; /* Espacement intérieur réduit */
+        border-radius: 10px; /* Bords moins arrondis */
+    }
+
+    /* Titre */
+    #accueil h1 {
+
+        font-size: 2rem; /* Taille de police réduite */
+        margin-bottom: 15px; /* Espacement réduit */
+        margin-top: 15px;
+    }
+
+    /* Liste des éléments */
+    #accueil .win_list {
+        justify-content: center; /* Centrer les éléments */
+        gap: 15px; /* Espacement réduit entre les éléments */
+    }
+
+    /* Conteneur interne */
+    #accueil .inner-home-container {
+        width: calc(50% - 15px); /* 2 éléments par ligne sur les écrans moyens */
+        margin-bottom: 15px; /* Espacement réduit */
+    }
+
+    /* Lien du menu */
+    #accueil .menu-item {
+        padding: 10px; /* Espacement intérieur réduit */
+        font-size: 1rem; /* Taille de police réduite */
+    }
+
+    #accueil .menu-item i {
+        font-size: 1.2rem; /* Taille des icônes réduite */
+    }
+
+    /* Séparateur */
+    .separateur {
+        width: 90%; /* Largeur réduite */
+        margin: 15px auto; /* Espacement réduit */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Styles généraux du corps de la page */
+    body {
+        position: relative;
+        padding-top: 0px; /* Réduction du décalage pour un look plus compact */
+    }
+
+    /* Conteneur principal */
+    #accueil .home-container {
+        max-width: 100%; /* Largeur maximale à 100% */
+        padding: 15px; /* Espacement intérieur minimal */
+        border-radius: 5px; /* Bords moins arrondis */
+    }
+
+    /* Titre */
+    #accueil h1 {
+        font-size: 1.8rem; /* Taille de police encore réduite */
+        margin-bottom: 10px; /* Espacement minimal */
+        margin-top: 10px;
+    }
+
+    /* Liste des éléments */
+    #accueil .win_list {
+        gap: 10px; /* Espacement minimal entre les éléments */
+    }
+
+    /* Conteneur interne */
+    #accueil .inner-home-container {
+        width: 100%; /* 1 élément par ligne sur les petits écrans */
+        margin-bottom: 10px; /* Espacement minimal */
+    }
+
+    /* Lien du menu */
+    #accueil .menu-item {
+        padding: 8px; /* Espacement intérieur minimal */
+        font-size: 0.9rem; /* Taille de police très réduite */
+    }
+
+    #accueil .menu-item i {
+        font-size: 1rem; /* Taille des icônes très réduite */
+    }
+
+    /* Séparateur */
+    .separateur {
+        width: 100%; /* Largeur à 100% */
+        margin: 10px auto; /* Espacement minimal */
+    }
+}
+

@@ -1,0 +1,165 @@
+/* Styles spécifiques pour la page d'inscription */
+#compte {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+#compte .inner1-home-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Titre et séparateur */
+#compte h2 {
+    color: #c41e3a;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+#compte .sep2 {
+    width: 60px;
+    height: 4px;
+    background-color: #d32f2f;
+    margin: 0 auto 30px;
+}
+
+/* Formulaire d'inscription */
+#inscription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#inscription div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#inscription label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 15px;
+}
+
+#inscription input[type="text"],
+#inscription input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#inscription input:focus {
+    border-color: #c41e3a;
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+    outline: none;
+}
+
+/* Bouton d'inscription */
+#inscription button[type="submit"] {
+    background-color: #c41e3a;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0;
+    width: 100%;
+}
+
+#inscription button[type="submit"]:hover {
+    background-color: #a01830;
+}
+
+/* Lien de connexion */
+#compte p {
+    margin-top: 25px;
+    text-align: center;
+    color: #555;
+}
+
+#compte a {
+    color: #c41e3a;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#compte a:hover {
+    color: #a01830;
+    text-decoration: underline;
+}
+
+/* Messages d'erreur/succès */
+.error, .success {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.success {
+    background-color: #e8f8f0;
+    border-left: 5px solid #27ae60;
+    color: #27ae60;
+}
+
+.error {
+    background-color: #fdedec;
+    border-left: 5px solid #e74c3c;
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #compte .inner1-home-container {
+        padding: 30px 20px;
+    }
+    
+    #inscription {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #compte .inner1-home-container {
+        padding: 25px 15px;
+    }
+    
+    #inscription {
+        gap: 15px;
+    }
+    
+    #inscription input[type="text"],
+    #inscription input[type="password"] {
+        padding: 10px 12px;
+    }
+    
+    #inscription button[type="submit"] {
+        padding: 12px;
+    }
+}

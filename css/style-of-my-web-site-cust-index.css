@@ -1,0 +1,402 @@
+@media screen and (min-width: 1301px) {
+    /* Styles généraux du corps de la page -------------------------------------------------------------------------------- */
+    body {
+        background-color: #ffffff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+        padding-top: 200px; /* Décalage du contenu vers le bas */
+    }
+}
+/* Animation des étoiles : Positionnement absolu et style circulaire --------------------------------------------- */
+.star {
+    position: absolute;
+    background-color: rgb(255, 29, 29);
+    border-radius: 50%; /* Forme circulaire */
+}
+
+/* Styles spécifiques à la section Accueil */
+#accueil.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#accueil .inner-home-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.247); /* Ombre douce */
+    backdrop-filter: blur(10px); /* Effet de flou pour un look moderne */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+}
+
+#accueil h2 {
+    font-size: 3.5rem;
+    color: rgb(177, 0, 0);
+    margin-bottom: 20px;
+    font-weight: 700; /* Texte plus gras */
+    animation: fadeIn 2s ease-in-out;
+}
+
+#accueil .intro-text {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6; /* Espacement des lignes */
+    animation: fadeIn 3s ease-in-out;
+}
+
+#accueil .section {
+    margin-bottom: 60px;
+}
+
+#accueil p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+#accueil .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#accueil .festive-image {
+    width: 220px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#accueil .festive-image:hover {
+    transform: scale(1.05); /* Zoom léger */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2); /* Ombre plus intense au survol */
+}
+
+#accueil button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #d32f2f; /* Rouge */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500; /* Texte semi-gras */
+}
+
+#accueil button:hover {
+    background-color: #b71c1c; /* Rouge plus foncé */
+    transform: translateY(-3px); /* Effet de levée */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.magic-message {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+    font-weight: 500;
+    z-index: 1000;
+    opacity: 0;
+    width: auto;
+    transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.magic-message.show {
+    top: 50%;
+    opacity: 1;
+}
+
+/*jouets--------------------------------------------------*/
+#jouets {
+    position: relative;
+    padding: 50px 0;
+}
+
+#jouets .inner1-home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#jouets h2 {
+    text-align: center;
+    color: rgb(177, 0, 0);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#jouets .sep2 {
+    width: 60px;
+    height: 4px;
+    background-color: #d32f2f;
+    margin: 0 auto 30px;
+}
+
+#jouets .gift-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+#jouets .gift-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    overflow: hidden;
+    border: solid 1px red;
+    transition: transform 0.3s ease;
+    width: calc(25% - 30px);
+    min-width: 200px;
+}
+
+#jouets .gift-item:hover {
+    transform: translateY(-5px);
+}
+
+#jouets .gift-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#jouets .gift-name {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #jouets .gift-item {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    #jouets .gift-item {
+        width: 100%;
+    }
+}
+/*listes_souhaits------------------------------------------*/
+#listes_souhaits {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff, #ffffff00);
+    padding: 50px 0;
+
+}
+
+#listes_souhaits .inner1-home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.418);
+}
+
+#listes_souhaits h2 {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#listes_souhaits .sep2 {
+    width: 60px;
+    height: 4px;
+    background-color: #d32f2f;
+    margin: 0 auto 30px;
+}
+
+#listes_souhaits p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#listes_souhaits form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#listes_souhaits input[type="email"],
+#listes_souhaits input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#listes_souhaits button[type="submit"] {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#listes_souhaits button[type="submit"]:hover {
+    background-color: #b71c1c;
+}
+
+#listes_souhaits a {
+    color: #d32f2f;
+    text-decoration: none;
+}
+
+#listes_souhaits a:hover {
+    text-decoration: underline;
+}
+
+#listes_souhaits .gift-item {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 15px;
+    padding: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#listes_souhaits .gift-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#listes_souhaits .gift-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px; 
+    margin-right: 15px; 
+}
+
+#listes_souhaits .gift-item input[type="checkbox"] {
+    margin-right: 15px; 
+    width: 20px;
+    height: 20px; 
+    cursor: pointer;
+}
+
+#listes_souhaits .gift-item .gift-name {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    flex-grow: 1;
+}
+
+
+@media (max-width: 768px) {
+    #listes_souhaits .inner1-home-container {
+        padding: 20px;
+    }
+
+    #listes_souhaits h2 {
+        font-size: 2em;
+    }
+}
+
+/*support---------------------------*/
+
+
+#support {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff, #ffffff00);
+    padding: 50px 0;
+
+}
+
+#support .inner1-home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.418);
+}
+
+#support h2 {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#support .sep2 {
+    width: 60px;
+    height: 4px;
+    background-color: #d32f2f;
+    margin: 0 auto 30px;
+}
+#support .sep2 {
+    width: 60px;
+    height: 4px;
+    background-color: #d32f2f;
+    margin: 0 auto 30px;
+}
+
+#support p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#support form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
